@@ -30,39 +30,3 @@ bool del_min(SQList &L, int &value)
     L.length--;
     return true;
 }
-
-int main()
-{
-    SQList L;
-    L.length = 5;
-    L.data[0] = 3;
-    L.data[1] = 1;
-    L.data[2] = 5;
-    L.data[3] = 2;
-    L.data[4] = 4;
-
-    cout << "原始顺序表:";
-    for (int i = 0; i < L.length; i++)
-    {
-        cout << L.data[i] << " ";
-    }
-    cout << endl;
-
-    int value;
-    if (del_min(L, value))
-    {
-        cout << "删除的最小值为:" << value << endl;
-        cout << "删除后的顺序表:";
-        for (int i = 0; i < L.length; i++)
-        {
-            cout << L.data[i] << " ";
-        }
-        cout << endl;
-    }
-    else
-    {
-        cout << "顺序表为空,无法删除!" << endl;
-    }
-
-    return 0;
-}
